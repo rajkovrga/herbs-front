@@ -1,0 +1,17 @@
+<ng-template [ngIf]="editable == false">
+    <app-profile-content  class="col-12"></app-profile-content>
+</ng-template>
+<ng-template [ngIf]="editable == true">
+    <app-profile-edit class="col-12" ></app-profile-edit>
+    
+</ng-template>
+
+<div class="row">
+    <div class="col-12 d-flex justify-content-center">
+        <button class="btn btn-success"  (click)="editable=!editable">
+            <span *ngIf="editable == false">Edit profile</span>
+            <span *ngIf="editable == true">Back</span>
+            
+        </button>
+    </div>
+</div>

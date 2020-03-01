@@ -1,0 +1,42 @@
+
+.comment-form
+{
+    margin-bottom: 48px !important;
+    margin-top:10px !important;
+}
+
+#comments-header
+{
+    background: rgb(44, 155, 44);
+    padding:10px 6px;
+    color:white;
+}
+
+.comment-body
+{
+    padding:4px 7px !important;
+}
+
+#more-comments
+{
+    padding-top:5px;
+    color:rgb(93, 145, 93);
+    border:1px solid green;
+}
+
+#more-comments:hover
+{
+    background: rgb(179, 219, 179);
+    color:white;
+    transition:0.36s;
+}
+.avatar-image
+{
+    border-radius:50%;
+    width:39px;
+    height: 39px;
+}
+#comments
+{
+    padding:38px 0px;
+}

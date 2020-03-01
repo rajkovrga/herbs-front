@@ -1,0 +1,46 @@
+.profile-content img
+{
+    border-radius: 50%;
+    width:87%;
+    height:260px;
+}
+
+#image-block
+{
+    position: relative;
+}
+
+#change-img
+{
+    position: absolute;
+    z-index:-10;
+    opacity: 0;
+}
+#edit-icon-img
+{
+    font-size:1.4em;
+    width:30px;
+    height:30px;
+    position: absolute;
+    top:0px;
+    right:10%;
+    background: rgb(139, 206, 139);
+    padding:8px;
+    color:white;
+    border-radius:50%;
+}
+
+#edit-icon-img:hover{
+    background: rgb(66, 148, 66);
+    transition:0.36s;
+}
+
+.title
+{
+    padding-bottom: -10px;
+}
+
+.form-group
+{
+    padding:17px 0px;
+}

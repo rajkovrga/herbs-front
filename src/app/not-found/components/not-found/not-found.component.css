@@ -1,0 +1,11 @@
+#content-page img
+{
+ margin:0px 10px;
+ height: 300px;
+ max-width: 300px;
+}
+
+#content-page p{
+    font-size:1.3em;
+    color:black;
+}

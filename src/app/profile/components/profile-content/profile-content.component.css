@@ -1,0 +1,23 @@
+.profile-content img
+{
+    border-radius: 50%;
+    width:87%;
+    height:260px;
+}
+
+.profile-content
+{
+    text-align:center !important;
+
+}
+
+.profile-content #username
+{
+
+    padding:10px 9px;
+    font-size:1.5em;
+}
+
+.profile-content b{
+    font-weight: bold;
+}

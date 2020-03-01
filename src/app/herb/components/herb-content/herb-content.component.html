@@ -1,0 +1,31 @@
+<div id="herb" class="col-12 d-flex justify-content-center flex-wrap">
+    <div class="col-11 col-sm-7 col-md-5  col-lg-4">
+        <img src="assets/images/women.jpg" alt="">
+    </div>
+
+    <div class="col-11 col-sm-7 col-md-5  col-lg-4">
+        <h2>{{herbItem.srb_name}}</h2>
+        <h5>{{herbItem.lat_name}}</h5>
+        <p> <b>Period branja</b> : {{herbItem?.period?.name}}</p>
+        <p> <b>Deo za branje</b> : {{herbItem?.part?.name}}</p>
+
+        <div *ngIf="herbItem.toxic; then untoxicText else toxicText"></div>
+        <ng-template #toxicText>
+            <p> Biljka je otrvona</p>
+        </ng-template>
+        <ng-template #untoxicText>
+            <p> Biljka je bezbedna</p>
+        </ng-template> 
+
+        <div *ngIf="herbItem.endangered; then endangered else noendangered"></div>
+        <ng-template #endangered>
+            <p> Biljka je ugrožena</p>
+        </ng-template>
+        <ng-template #noendangered>
+            <p> Biljka nije ugrožena</p>
+        </ng-template>
+
+        <p> <b>Opis:</b> <br> {{ herbItem.desc }}</p>
+    </div>
+
+</div>

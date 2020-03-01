@@ -1,0 +1,144 @@
+<div class="site-wrap">
+
+    
+
+    <div class="site-section">
+      <div class="container">
+
+        <div class="row mb-5">
+          <div class="col-md-9 order-2">
+
+            <div class="row">
+              <div class="col-md-12 mb-5">
+                <div class="d-flex justify-content-between mb-4">
+                  <h2 class="text-black h5">Spisak lekovitih biljaka</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-5">
+
+            <ng-container *ngFor="let item of (_herbs | async).data ">
+              <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                <div class="block-4 text-center border">
+                  <figure class="block-4-image">
+                    <a routerLink="/herb/{{item.id}}"  routerLinkActive="active"><img src="assets/images/cloth_1.jpg" alt="Image placeholder"
+                        class="img-fluid"></a>
+                  </figure>
+                  <div class="block-4-text p-4 ">
+                    <h3><a routerLink="/herb/{{item.id}}" class="color-title ">{{ item.srb_name }}</a></h3>
+                    <p class="mb-0">{{ item.lat_name }}</p>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+
+            </div>
+            <div class="row" data-aos="fade-up">
+              <div class="col-md-12 text-center">
+                <ngb-pagination class="d-flex justify-content-center" (pageChange)="paginate(page)" [(page)]="page" pageSize="9" [maxSize]="3" [rotate]="true" [collectionSize]="totalItems" [boundaryLinks]="true"></ngb-pagination>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 order-1 mb-5 mb-md-0">
+
+
+            <div class="border p-4 rounded mb-4">
+
+              <div class="mb-4">
+                <h3 class="mb-3 h6 text-uppercase text-black d-block">Period za branje</h3>
+                <div class="dropdown mr-1 ml-md-auto">
+                  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#optionsPerods"
+                    aria-expanded="false" aria-controls="optionsPerods">Odaberite..</button>
+                  <div id="optionsPerods" class="collapse multi-collapse">
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Januar</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Februar</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Mart</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">April</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Maj</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Jun</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Jul</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Avgust</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Septembar</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Oktobar</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Novembar</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Decembar</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <h3 class="mb-3 h6 text-uppercase text-black d-block">Deo za branje</h3>
+                <div class="dropdown mr-1 ml-md-auto">
+                  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#optionsPart"
+                    aria-expanded="false" aria-controls="optionsPart">Odaberite..</button>
+                  <div id="optionsPart" class="collapse multi-collapse">
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Plod</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Koren</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Stablo</span>
+                    </label>
+                    <label for="s_md" class="d-flex">
+                      <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">List</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <h3 class="mb-3 h6 text-uppercase text-black d-block">Otrovne</h3>
+                <label for="s_sm" class="d-flex">
+                  <input type="checkbox" id="s_sm" class="mr-2 mt-1"> <span class="text-black">Da</span>
+                </label>
+                <label for="s_md" class="d-flex">
+                  <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Ne</span>
+                </label>
+              </div>
+              <div class="mb-4">
+                <h3 class="mb-3 h6 text-uppercase text-black d-block">Ugrozene</h3>
+                <label for="s_sm" class="d-flex">
+                  <input type="checkbox" id="s_sm" class="mr-2 mt-1"> <span class="text-black">Da</span>
+                </label>
+                <label for="s_md" class="d-flex">
+                  <input type="checkbox" id="s_md" class="mr-2 mt-1"> <span class="text-black">Ne</span>
+                </label>
+              </div>
+              <div class="mb-4">
+                <button class="btn btn-success col-12">Filtriraj</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+     
+      </div>
+    </div>
+
+  </div>
